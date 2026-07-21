@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+/*
+  FONTS: Neue Montreal is a commercial family from Pangram Pangram and can't be
+  loaded from a public CDN. Drop the licensed .woff2 files into /public/fonts
+  and the @font-face rules below will pick them up. Until then the site falls
+  back to the system sans/mono stack. Installed name is usually "PP Neue Montreal".
+*/
+@font-face {
+  font-family: "PP Neue Montreal";
+  src: url("/fonts/PPNeueMontreal-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "PP Neue Montreal";
+  src: url("/fonts/PPNeueMontreal-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "PP Neue Montreal Mono";
+  src: url("/fonts/PPNeueMontrealMono-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --color-navy: #0e2350;
+  --color-navy-deep: #0a1a3c;
+  --color-accent: #2a5bd7;
+  --color-accent-bright: #6e9bff;
+  --color-logo-ink: #1a1a1a;
+  --color-text-body: #4a5678;
+  --color-muted: #8792ac;
+  --color-line: #eaf0fa;
+  --color-line-2: #e1e8f5;
+  --color-tint: #f5f8fd;
+
+  --font-sans: "PP Neue Montreal", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Helvetica, Arial, sans-serif;
+  --font-mono: "PP Neue Montreal Mono", ui-monospace, "SF Mono", Menlo,
+    Consolas, monospace;
+
+  --container-content: 1120px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #ffffff;
+  color: var(--color-navy);
+  font-family: var(--font-sans);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+@layer base {
+  h1,
+  h2,
+  h3 {
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    margin: 0;
+  }
+  p {
+    margin: 0;
+  }
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
