@@ -5,8 +5,8 @@ import Container from "@/components/Container";
 import PageHero from "@/components/PageHero";
 
 export const metadata: Metadata = {
-  title: "About — *codeplain",
-  description: "Make the specification the source of truth for software — so teams maintain intent, not implementations.",
+  title: "About | *codeplain",
+  description: "Make the specification the source of truth for software, so teams maintain intent, not implementations.",
 };
 
 const TEAM = [
@@ -20,7 +20,7 @@ export default function About() {
       <Header />
       <main>
         <PageHero eyebrow="Company" title="We think code should be disposable.">
-          Our mission: make the specification the source of truth for software — so teams maintain intent, not implementations.
+          Our mission: make the specification the source of truth for software, so teams maintain intent, not implementations.
         </PageHero>
 
         <section className="pb-20">

@@ -8,9 +8,9 @@ import NumberedCard from "@/components/NumberedCard";
 import { Terminal, TerminalPrompt, TerminalOk } from "@/components/Terminal";
 
 export const metadata: Metadata = {
-  title: "Integrations Forge — Build software integrations at scale | *codeplain",
+  title: "Integrations Forge: Build software integrations at scale | *codeplain",
   description:
-    "Coding agents made writing integration code an order of magnitude faster. Integrations Forge makes it maintainable — build and run hundreds of integrations without drowning in upkeep.",
+    "Coding agents made writing integration code an order of magnitude faster. Integrations Forge makes it maintainable: build and run hundreds of integrations without drowning in upkeep.",
 };
 
 const CAPABILITIES = [
@@ -26,7 +26,7 @@ const PHOENIX_PRINCIPLES = [
 ];
 
 const SCALING_POINTS = [
-  { title: "Preserved intent", body: "Intent is fully preserved in Plain specs, so you can regenerate code at any time." },
+  { title: "Preserved intent", body: "Intent is fully preserved in ∗∗∗plain specs, so you can regenerate code at any time." },
   { title: "Agentic skills", body: "Developers use agentic skills to write and maintain specs." },
   { title: "Production-ready", body: "The *codeplain renderer generates production-ready software from reviewed specs." },
 ];
@@ -47,7 +47,7 @@ export default function IntegrationsForge() {
               Building software integrations at scale.
             </h1>
             <p className="text-[clamp(17px,2.1vw,19px)] text-text-body max-w-[56ch] mb-8.5">
-              Coding agents made writing integration code an order of magnitude faster. Integrations Forge makes it maintainable — so you can build and run hundreds of integrations without drowning in upkeep.
+              Coding agents made writing integration code an order of magnitude faster. Integrations Forge makes it maintainable, so you can build and run hundreds of integrations without drowning in upkeep.
             </p>
             <div className="flex flex-wrap gap-3">
               <Button href="/book-a-demo" variant="primary">Book a demo</Button>
@@ -126,8 +126,8 @@ export default function IntegrationsForge() {
             <div className="grid grid-cols-3 max-[760px]:grid-cols-1 gap-6">
               <div>
                 <div className="font-mono text-xs text-accent mb-4">step 01</div>
-                <h3 className="text-[19px] mb-2.5">Plain specs</h3>
-                <p className="text-text-body text-[15px]">Developers and agents write and evolve <code className="font-mono">.plain</code> specs together — the durable source of truth for the integration.</p>
+                <h3 className="text-[19px] mb-2.5">∗∗∗plain specs</h3>
+                <p className="text-text-body text-[15px]">Developers and agents write and evolve <code className="font-mono">.plain</code> specs together, the durable source of truth for the integration.</p>
               </div>
               <div>
                 <div className="font-mono text-xs text-accent mb-4">step 02</div>
@@ -147,7 +147,7 @@ export default function IntegrationsForge() {
         <section className="pb-24 max-[760px]:pb-16.5">
           <Container>
             <SectionHead kicker="See it work" title="From a .plain file to a working integration.">
-              In the demo, a developer asks for a HubSpot integration in Claude Code. The agent writes the spec, researches the HubSpot API, and renders it — the same workflow covers CRMs like HubSpot, Salesforce, Pipedrive, and Zoho.
+              In the demo, a developer asks for a HubSpot integration in Claude Code. The agent writes the spec, researches the HubSpot API, and renders it. The same workflow covers CRMs like HubSpot, Salesforce, Pipedrive, and Zoho.
             </SectionHead>
             <Terminal label="claude code">
               <TerminalPrompt symbol="›">I want to build a new integration for HubSpot. It should sync contacts.</TerminalPrompt>
@@ -163,7 +163,7 @@ export default function IntegrationsForge() {
         <section className="py-24 max-[760px]:py-16.5 bg-tint border-y-[0.5px] border-line">
           <Container>
             <SectionHead kicker="Proof" title="Incode: from 2 weeks to 1 day per integration." className="mb-9">
-              Incode integrates external identity and data providers — Sardine, Serpro, Mono-BVN, Telesign, and more. Each integration used to mean specifying the data to fetch, wrangling OpenAPI specs, setting up test accounts, and mapping vendor-specific data by hand. With Integrations Forge, every one of those specs renders against a shared integration template into production-ready code. The work dropped from about two weeks to a single day per integration.
+              Incode integrates external identity and data providers: Sardine, Serpro, Mono-BVN, Telesign, and more. Each integration used to mean specifying the data to fetch, wrangling OpenAPI specs, setting up test accounts, and mapping vendor-specific data by hand. With Integrations Forge, every one of those specs renders against a shared integration template into production-ready code. The work dropped from about two weeks to a single day per integration.
             </SectionHead>
             <div className="grid grid-cols-4 max-[900px]:grid-cols-2 max-[760px]:grid-cols-1 gap-4 mb-10">
               {TEMPLATE_ITEMS.map((item) => (

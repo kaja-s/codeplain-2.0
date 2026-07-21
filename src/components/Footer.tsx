@@ -7,9 +7,9 @@ const COLUMNS: { title: string; links: { href: string; label: string; external?:
     title: "Platform",
     links: [
       { href: "/platform", label: "Overview" },
-      { href: "https://plainlang.org/", label: "Plain language", external: true },
+      { href: "https://plainlang.org/", label: "∗∗∗plain language", external: true },
       { href: "https://github.com/Codeplain-ai/plain-forge", label: "plain-forge", external: true },
-      { href: "/learn/docs", label: "Docs" },
+      { href: "https://github.com/Codeplain-ai/codeplain", label: "Docs", external: true },
     ],
   },
   {
@@ -23,9 +23,9 @@ const COLUMNS: { title: string; links: { href: string; label: string; external?:
   {
     title: "Learn",
     links: [
-      { href: "/learn/blog", label: "Blog" },
+      { href: "https://blog.codeplain.ai/", label: "Blog", external: true },
       { href: "/learn/events", label: "Events" },
-      { href: "/learn/docs", label: "Docs" },
+      { href: "https://github.com/Codeplain-ai/codeplain", label: "Docs", external: true },
     ],
   },
   {

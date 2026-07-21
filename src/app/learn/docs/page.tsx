@@ -5,7 +5,7 @@ import Container from "@/components/Container";
 import PageHero from "@/components/PageHero";
 
 export const metadata: Metadata = {
-  title: "Docs — *codeplain",
+  title: "Docs | *codeplain",
   description: "Reference docs for Plain, the *codeplain renderer, and plain-forge.",
 };
 

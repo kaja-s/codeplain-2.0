@@ -6,7 +6,7 @@ import PageHero from "@/components/PageHero";
 import { Terminal, TerminalPrompt } from "@/components/Terminal";
 
 export const metadata: Metadata = {
-  title: "Get started — *codeplain",
+  title: "Get started | *codeplain",
   description: "New users get 50 rendering credits. Install *codeplain on Windows, macOS, or Linux.",
 };
 

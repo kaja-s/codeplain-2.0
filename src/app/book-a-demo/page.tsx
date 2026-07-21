@@ -5,14 +5,14 @@ import Container from "@/components/Container";
 import DemoForm from "@/components/DemoForm";
 
 export const metadata: Metadata = {
-  title: "Book a demo — *codeplain",
+  title: "Book a demo | *codeplain",
   description:
     "See *codeplain in action. Book a 30-minute demo to see how spec-driven rendering builds and maintains software integrations at scale.",
   robots: "noindex",
 };
 
 const BULLETS = [
-  "Renders production-ready integrations from a Plain spec — no human in the loop.",
+  "Renders production-ready integrations from a ∗∗∗plain spec, no human in the loop.",
   "Regenerates code from the same spec the moment an upstream API changes, instead of patching by hand.",
   "Keeps review at the spec level, so intent stays readable even as the implementation is rebuilt.",
   "Cut Incode's integration work from about two weeks to a single day, per integration.",

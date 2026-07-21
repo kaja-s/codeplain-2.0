@@ -5,7 +5,7 @@ import Container from "@/components/Container";
 import PageHero from "@/components/PageHero";
 
 export const metadata: Metadata = {
-  title: "Careers — *codeplain",
+  title: "Careers | *codeplain",
   description: "Build the tooling for regenerative software.",
 };
 
@@ -15,7 +15,7 @@ export default function Careers() {
       <Header />
       <main>
         <PageHero eyebrow="Company · Careers" title="Build the tooling for regenerative software.">
-          We&apos;re a small team building the platform that turns specs into production code. No open roles are posted yet — reach out if you want to build this with us.
+          We&apos;re a small team building the platform that turns specs into production code. No open roles are posted yet. Reach out if you want to build this with us.
         </PageHero>
         <section className="pb-20">
           <Container>

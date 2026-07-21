@@ -5,8 +5,8 @@ import Container from "@/components/Container";
 import PageHero from "@/components/PageHero";
 
 export const metadata: Metadata = {
-  title: "Customers — *codeplain",
-  description: "From 2 weeks to 1 day per integration — how Incode uses *codeplain.",
+  title: "Customers | *codeplain",
+  description: "From 2 weeks to 1 day per integration: how Incode uses *codeplain.",
 };
 
 export default function Customers() {
@@ -15,7 +15,7 @@ export default function Customers() {
       <Header />
       <main>
         <PageHero eyebrow="Company · Customers" title="From 2 weeks to 1 day per integration.">
-          Incode integrates external identity and data providers — Sardine, Serpro, Mono-BVN, Telesign, and more — using Integrations Forge.
+          Incode integrates external identity and data providers (Sardine, Serpro, Mono-BVN, Telesign, and more) using Integrations Forge.
         </PageHero>
 
         <section className="pb-20">

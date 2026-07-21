@@ -7,14 +7,14 @@ import Button from "@/components/Button";
 import { Terminal, TerminalPrompt } from "@/components/Terminal";
 
 export const metadata: Metadata = {
-  title: "Platform — Specs in. Production code out. | *codeplain",
+  title: "Platform: Specs in. Production code out. | *codeplain",
   description:
-    "*codeplain renders a Plain specification into production-ready code, validates it, and regenerates it whenever you need. No human in the loop.",
+    "*codeplain renders a ∗∗∗plain specification into production-ready code, validates it, and regenerates it whenever you need. No human in the loop.",
 };
 
 const COMPONENTS = [
   {
-    name: "Plain, the language",
+    name: "∗∗∗plain, the language",
     body: "Extends natural language with just enough structure to remove ambiguity. Express intent at any level of detail. Open source.",
     link: { href: "https://plainlang.org/", label: "plainlang.org →" },
   },
@@ -24,7 +24,7 @@ const COMPONENTS = [
   },
   {
     name: "plain-forge",
-    body: "Open-source agentic skills. Claude Code, Codex, and OpenCode use it to research APIs, draft specs, and maintain them incrementally — one feature at a time.",
+    body: "Open-source agentic skills. Claude Code, Codex, and OpenCode use it to research APIs, draft specs, and maintain them incrementally, one feature at a time.",
     link: { href: "https://github.com/Codeplain-ai/plain-forge", label: "GitHub →" },
   },
   {
@@ -39,7 +39,7 @@ export default function Platform() {
       <Header />
       <main>
         <PageHero eyebrow="The platform" title="Specs in. Production code out.">
-          *codeplain renders a Plain specification into production-ready code, validates it, and regenerates it whenever you need. No human in the loop.
+          *codeplain renders a ∗∗∗plain specification into production-ready code, validates it, and regenerates it whenever you need. No human in the loop.
         </PageHero>
 
         <section className="pb-20">

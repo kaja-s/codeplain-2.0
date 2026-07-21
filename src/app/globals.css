@@ -59,6 +59,20 @@ body {
   line-height: 1.55;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  text-transform: lowercase;
+}
+
+/* keep user-entered form values as typed */
+input,
+textarea {
+  text-transform: none;
+}
+
+/* Tailwind preflight resets buttons/selects to text-transform:none —
+   let them inherit the site-wide lowercase instead */
+button,
+select {
+  text-transform: inherit;
 }
 
 @layer base {

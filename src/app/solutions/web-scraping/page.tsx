@@ -5,7 +5,7 @@ import Container from "@/components/Container";
 import PageHero from "@/components/PageHero";
 
 export const metadata: Metadata = {
-  title: "Web Scraping — Coming soon | *codeplain",
+  title: "Web Scraping: Coming soon | *codeplain",
   description:
     "Scrapers that survive site changes by regenerating from the spec. Coming soon.",
 };
@@ -16,7 +16,7 @@ export default function WebScraping() {
       <Header />
       <main>
         <PageHero eyebrow="Solutions · Coming soon" title="Scrapers that don't break when the site does.">
-          Same idea as Integrations Forge, pointed at the web. Describe what to extract in a Plain spec; regenerate the scraper when the page changes.
+          Same idea as Integrations Forge, pointed at the web. Describe what to extract in a ∗∗∗plain spec; regenerate the scraper when the page changes.
         </PageHero>
 
         <section className="pb-20">

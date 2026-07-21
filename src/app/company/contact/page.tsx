@@ -5,7 +5,7 @@ import Container from "@/components/Container";
 import PageHero from "@/components/PageHero";
 
 export const metadata: Metadata = {
-  title: "Contact — *codeplain",
+  title: "Contact | *codeplain",
   description: "Get in touch with *codeplain.",
 };
 

@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import PageHero from "@/components/PageHero";
 
 export const metadata: Metadata = {
-  title: "Terms of Service — *codeplain",
+  title: "Terms of Service | *codeplain",
   robots: "noindex",
 };
 

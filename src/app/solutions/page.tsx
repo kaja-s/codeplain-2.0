@@ -6,7 +6,7 @@ import PageHero from "@/components/PageHero";
 import Button from "@/components/Button";
 
 export const metadata: Metadata = {
-  title: "Solutions — Purpose-built on the *codeplain platform",
+  title: "Solutions: Purpose-built on the *codeplain platform",
   description:
     "The renderer can produce almost anything from a spec. Solutions are products we've built on it for the work that breaks most often.",
 };

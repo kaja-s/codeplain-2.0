@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import PageHero from "@/components/PageHero";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy — *codeplain",
+  title: "Privacy Policy | *codeplain",
   robots: "noindex",
 };
 

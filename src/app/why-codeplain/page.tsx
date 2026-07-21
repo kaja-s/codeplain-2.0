@@ -6,7 +6,7 @@ import PageHero from "@/components/PageHero";
 import Button from "@/components/Button";
 
 export const metadata: Metadata = {
-  title: "Why *codeplain — Code should be regenerated, not maintained",
+  title: "Why *codeplain: Code should be regenerated, not maintained",
   description:
     "Coding agents made code cheap and fast. That inverts decades of assumptions about what a software team should actually own and maintain.",
 };
@@ -18,7 +18,7 @@ const SECTIONS = [
   },
   {
     heading: "Phoenix architecture",
-    body: "Introduced by Chad Fowler: regenerate code instead of maintaining it, keep intent in the spec instead of the implementation, and review one level up. *codeplain is where that mindset becomes a production system — the renderer turns reviewed Plain specs into production code, with no human in the loop.",
+    body: "Introduced by Chad Fowler: regenerate code instead of maintaining it, keep intent in the spec instead of the implementation, and review one level up. *codeplain is where that mindset becomes a production system. The renderer turns reviewed ∗∗∗plain specs into production code, with no human in the loop.",
   },
   {
     heading: "The economics",
