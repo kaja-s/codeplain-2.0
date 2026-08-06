@@ -30,7 +30,7 @@ const SECTIONS = [
   },
   {
     heading: "Where we're going",
-    body: "*codeplain is a platform, and solutions are built on top of it: Integrations Forge today, Web Scraping next, more to follow.",
+    body: "*codeplain is a platform, and solutions are built on top of it: Integrations Forge today, Web Scraper next, more to follow.",
   },
 ];
 
@@ -56,7 +56,7 @@ export default function WhyCodeplain() {
 
             <div className="flex gap-3 flex-wrap mt-14">
               <Button href="/book-a-demo" variant="primary">Book a demo</Button>
-              <Button href="/platform" variant="ghost">See the platform</Button>
+              <Button href="/plain" variant="ghost">See the platform</Button>
             </div>
           </Container>
         </section>

@@ -19,7 +19,7 @@ export default function NotFound() {
             </p>
             <div className="flex gap-3 flex-wrap">
               <Button href="/" variant="primary">Back home</Button>
-              <Button href="/platform" variant="ghost">See the platform</Button>
+              <Button href="/plain" variant="ghost">See the platform</Button>
             </div>
           </Container>
         </section>

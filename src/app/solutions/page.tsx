@@ -33,10 +33,10 @@ export default function Solutions() {
                 </div>
                 <span className="font-mono text-[13px] text-accent">Learn more →</span>
               </a>
-              <a href="/solutions/web-scraping" className="border-[0.5px] border-line rounded-3.5 p-6.5 bg-tint flex flex-col justify-between">
+              <a href="/solutions/web-scraper" className="border-[0.5px] border-line rounded-3.5 p-6.5 bg-tint flex flex-col justify-between">
                 <div>
                   <div className="flex items-center gap-2.5 mb-2.5">
-                    <h3 className="text-lg">Web Scraping</h3>
+                    <h3 className="text-lg">Web Scraper</h3>
                     <span className="font-mono text-[11px] px-2.25 py-1 rounded-full whitespace-nowrap bg-[#EEF1F7] text-muted">coming soon</span>
                   </div>
                   <p className="text-text-body text-[14.5px] mb-5">Scrapers that survive site changes.</p>

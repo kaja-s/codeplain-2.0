@@ -113,7 +113,7 @@ export default function IntegrationsForge() {
             <p className="text-text-body text-lg max-w-[56ch] mb-6.5">
               Phoenix architecture lets coding agents focus on <strong className="text-navy font-medium">intent over implementation</strong>.
             </p>
-            <a href="/why-codeplain" className="font-mono text-sm text-accent border-b border-accent pb-0.5">Read our point of view →</a>
+            <a href="/codeplain" className="font-mono text-sm text-accent border-b border-accent pb-0.5">Read our point of view →</a>
           </Container>
         </section>
 

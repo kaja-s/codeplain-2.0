@@ -68,7 +68,7 @@ export default function Platform() {
 
             <div className="flex gap-3 flex-wrap">
               <Button href="/get-started" variant="primary">Get started</Button>
-              <Button href="/learn/docs" variant="ghost">Read the docs</Button>
+              <Button href="/learn/documentation" variant="ghost">Read the docs</Button>
             </div>
           </Container>
         </section>

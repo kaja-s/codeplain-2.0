@@ -1,41 +1,98 @@
 import Container from "@/components/Container";
+import SectionHead from "@/components/SectionHead";
+
+const QUOTES: {
+  quote: string;
+  initials: string;
+  name: string;
+  role: string;
+  highlighted?: boolean;
+}[] = [
+  {
+    quote:
+      "Codeplain is helping us seamlessly integrate our recent acquisition into Incode's platform, freeing developers from drudge work.",
+    initials: "JJ",
+    name: "Jovan Jovanović",
+    role: "CTO, Incode",
+    highlighted: true,
+  },
+  {
+    quote:
+      "The bigger payoff comes when fixing and maintaining happens in the background and your teams can focus on building. That's when you start doing things that weren't even in range before.",
+    initials: "BC",
+    name: "Boris Cherny",
+    role: "Creator of Claude Code",
+  },
+];
+
+const METRICS: { icon: string; from: string; to: string }[] = [
+  { icon: "⚡", from: "2 weeks", to: "1 day per integration" },
+  { icon: "📋", from: "Code reviews", to: "Spec reviews (caught earlier)" },
+  { icon: "🔄", from: "Manual API updates", to: "Automatic updates" },
+  { icon: "👥", from: "Ad-hoc workflows", to: "Unified spec-driven process" },
+];
 
 export default function Testimonial() {
   return (
     <section className="py-24 max-[760px]:py-16.5">
       <Container>
-        <div className="flex flex-col items-center text-center">
-          <div className="text-[clamp(30px,5vw,52px)] font-medium tracking-tight text-navy leading-[1.05] mb-2">
-            From 2 weeks to 1 day{" "}
-            <span className="text-accent">per integration.</span>
-          </div>
-          <div className="font-mono text-xs tracking-wide uppercase text-muted mb-9.5">
-            Incode · Integrations Forge
-          </div>
-          <div
-            aria-hidden="true"
-            className="font-serif text-[46px] leading-[0.6] text-accent mb-4.5"
-          >
-            &ldquo;
-          </div>
-          <blockquote className="text-[clamp(22px,3vw,28px)] font-medium leading-[1.4] tracking-tight max-w-[28ch] mb-7.5">
-            *codeplain helped us seamlessly integrate our recent acquisition
-            into Incode&apos;s platform, freeing developers from drudge work.
-          </blockquote>
-          <div className="flex items-center gap-3.25">
+        <SectionHead
+          className="mx-auto text-center"
+          kicker="Proof"
+          title="14× Faster. Same Quality. Full Control."
+        >
+          Incode Technologies scaled from 20 to 200 integrations while
+          maintaining safety and consistency.
+        </SectionHead>
+
+        <div className="grid grid-cols-2 max-[760px]:grid-cols-1 gap-5 mb-14">
+          {QUOTES.map((q) => (
             <div
-              aria-hidden="true"
-              className="w-11.5 h-11.5 rounded-full bg-navy text-white flex items-center justify-center font-medium text-sm"
+              key={q.name}
+              className={`rounded-3xl p-8 ${
+                q.highlighted
+                  ? "bg-tint border-[0.5px] border-line-2"
+                  : "border-[0.5px] border-line-2"
+              }`}
             >
-              JJ
-            </div>
-            <div className="text-left">
-              <div className="font-medium text-[15px]">Jovan Jovanović</div>
-              <div className="font-mono text-[13px] text-[#5B6B8C]">
-                CTO, Incode
+              <div
+                aria-hidden="true"
+                className="font-serif text-[40px] leading-[0.6] text-accent mb-4"
+              >
+                &ldquo;
+              </div>
+              <blockquote className="text-[18px] leading-[1.5] tracking-tight mb-7">
+                {q.quote}
+              </blockquote>
+              <div className="flex items-center gap-3.25">
+                <div
+                  aria-hidden="true"
+                  className="w-11 h-11 rounded-full bg-navy text-white flex items-center justify-center font-medium text-sm shrink-0"
+                >
+                  {q.initials}
+                </div>
+                <div className="text-left">
+                  <div className="font-medium text-[15px]">{q.name}</div>
+                  <div className="font-mono text-[13px] text-[#5B6B8C]">
+                    {q.role}
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
+          ))}
+        </div>
+
+        <div className="grid grid-cols-4 max-[900px]:grid-cols-2 max-[480px]:grid-cols-1 gap-x-8 gap-y-8 border-t-[0.5px] border-line-2 pt-11">
+          {METRICS.map((m) => (
+            <div key={m.from}>
+              <div className="text-2xl mb-3" aria-hidden="true">
+                {m.icon}
+              </div>
+              <p className="text-[14.5px] text-text-body leading-snug">
+                {m.from} <span className="text-accent">→</span> {m.to}
+              </p>
+            </div>
+          ))}
         </div>
       </Container>
     </section>

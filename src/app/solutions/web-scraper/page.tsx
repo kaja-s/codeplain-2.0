@@ -5,7 +5,7 @@ import Container from "@/components/Container";
 import PageHero from "@/components/PageHero";
 
 export const metadata: Metadata = {
-  title: "Web Scraping: Coming soon | *codeplain",
+  title: "Web Scraper: Coming soon | *codeplain",
   description:
     "Scrapers that survive site changes by regenerating from the spec. Coming soon.",
 };

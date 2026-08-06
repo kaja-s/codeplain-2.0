@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 const LINKS = [
   { href: "/learn/blog", name: "Blog", body: "POV essays, product updates, and engineering deep-dives." },
   { href: "/learn/events", name: "Events", body: "Talks, demos, and where to find *codeplain in person." },
-  { href: "/learn/docs", name: "Docs", body: "Reference docs for Plain, the renderer, and plain-forge." },
+  { href: "/learn/documentation", name: "Docs", body: "Reference docs for Plain, the renderer, and plain-forge." },
 ];
 
 export default function Learn() {

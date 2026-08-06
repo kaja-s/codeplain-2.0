@@ -20,7 +20,7 @@ export default function Blog() {
         <section className="pb-20">
           <Container>
             <div className="flex flex-col gap-2.5">
-              <a href="/why-codeplain" className="font-mono text-sm text-accent border-b border-accent pb-0.5 w-fit">Why *codeplain →</a>
+              <a href="/codeplain" className="font-mono text-sm text-accent border-b border-accent pb-0.5 w-fit">Why *codeplain →</a>
               <a href="https://thenewstack.io/codeplain-spec-driven-regenerative-code/" target="_blank" rel="noopener noreferrer" className="font-mono text-sm text-accent border-b border-accent pb-0.5 w-fit">Code should be regenerated, not maintained (The New Stack) →</a>
               <a href="https://aicoding.leaflet.pub/" target="_blank" rel="noopener noreferrer" className="font-mono text-sm text-accent border-b border-accent pb-0.5 w-fit">Regenerative Software &amp; the Phoenix Architecture →</a>
             </div>

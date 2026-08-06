@@ -10,32 +10,30 @@ type NavChild = { href: string; label: string; external?: boolean };
 type NavItem = { href: string; label: string; children?: NavChild[] };
 
 const NAV_LINKS: NavItem[] = [
+  { href: "/plain", label: "Why Plain" },
+  { href: "/codeplain", label: "Why Codeplain" },
   {
     href: "/solutions",
     label: "Solutions",
     children: [
       { href: "/solutions/integrations-forge", label: "Integrations Forge" },
-      { href: "/solutions/web-scraping", label: "Web Scraping" },
+      { href: "/solutions/web-scraper", label: "Web Scraper" },
     ],
   },
-  { href: "/platform", label: "Platform" },
   {
     href: "/learn",
     label: "Learn",
     children: [
-      { href: "/learn", label: "Overview" },
-      { href: "https://blog.codeplain.ai/", label: "Blog", external: true },
-      { href: "https://github.com/Codeplain-ai/codeplain", label: "Docs", external: true },
+      { href: "/learn/documentation", label: "Documentation" },
+      { href: "/learn/resources", label: "Resources" },
+      { href: "/learn/blog", label: "Blog" },
       { href: "/learn/events", label: "Events" },
     ],
   },
   {
-    href: "/company/about",
+    href: "/company/press",
     label: "Company",
     children: [
-      { href: "/company/about", label: "About" },
-      { href: "/company/customers", label: "Customers" },
-      { href: "/company/careers", label: "Careers" },
       { href: "/company/press", label: "Press" },
       { href: "/company/contact", label: "Contact" },
     ],
@@ -132,7 +130,7 @@ export default function Header({
                   <div
                     className={`${
                       openSubmenu === link.label ? "flex" : "hidden"
-                    } flex-col pl-3 pb-1.5 min-[761px]:absolute min-[761px]:left-0 min-[761px]:top-full min-[761px]:pt-2.5 min-[761px]:pl-0 min-[761px]:pb-0 min-[761px]:hidden min-[761px]:group-hover:flex min-[761px]:group-focus-within:flex`}
+                    } flex-col pl-3 pb-1.5 min-[761px]:flex min-[761px]:absolute min-[761px]:left-0 min-[761px]:top-full min-[761px]:origin-top min-[761px]:pt-2.5 min-[761px]:pl-0 min-[761px]:pb-0 min-[761px]:invisible min-[761px]:scale-95 min-[761px]:opacity-0 min-[761px]:pointer-events-none min-[761px]:transition-[opacity,transform] min-[761px]:duration-150 min-[761px]:ease-out min-[761px]:group-hover:visible min-[761px]:group-hover:scale-100 min-[761px]:group-hover:opacity-100 min-[761px]:group-hover:pointer-events-auto min-[761px]:group-focus-within:visible min-[761px]:group-focus-within:scale-100 min-[761px]:group-focus-within:opacity-100 min-[761px]:group-focus-within:pointer-events-auto`}
                   >
                     <div className="min-[761px]:min-w-52 min-[761px]:rounded-2xl min-[761px]:border-[0.5px] min-[761px]:border-line min-[761px]:bg-white min-[761px]:p-1.5 min-[761px]:shadow-[0_12px_32px_-12px_rgba(20,33,68,0.22)]">
                       {link.children.map((child) => {

@@ -1,39 +1,36 @@
 import Link from "next/link";
 import Container from "./Container";
 import Logo from "./Logo";
+import NewsletterSignup from "./NewsletterSignup";
 
 const COLUMNS: { title: string; links: { href: string; label: string; external?: boolean }[] }[] = [
   {
-    title: "Platform",
+    title: "About",
     links: [
-      { href: "/platform", label: "Overview" },
-      { href: "https://plainlang.org/", label: "∗∗∗plain language", external: true },
-      { href: "https://github.com/Codeplain-ai/plain-forge", label: "plain-forge", external: true },
-      { href: "https://github.com/Codeplain-ai/codeplain", label: "Docs", external: true },
+      { href: "/plain", label: "Why Plain" },
+      { href: "/codeplain", label: "Why Codeplain" },
     ],
   },
   {
     title: "Solutions",
     links: [
       { href: "/solutions/integrations-forge", label: "Integrations Forge" },
-      { href: "/solutions/web-scraping", label: "Web Scraping" },
-      { href: "/why-codeplain", label: "Why *codeplain" },
+      { href: "/solutions/web-scraper", label: "Web Scraper" },
     ],
   },
   {
     title: "Learn",
     links: [
-      { href: "https://blog.codeplain.ai/", label: "Blog", external: true },
+      { href: "/learn/documentation", label: "Documentation" },
+      { href: "/learn/resources", label: "Resources" },
+      { href: "/learn/blog", label: "Blog" },
       { href: "/learn/events", label: "Events" },
-      { href: "https://github.com/Codeplain-ai/codeplain", label: "Docs", external: true },
     ],
   },
   {
     title: "Company",
     links: [
-      { href: "/company/about", label: "About" },
-      { href: "/company/customers", label: "Customers" },
-      { href: "/company/careers", label: "Careers" },
+      { href: "/company/press", label: "Press" },
       { href: "/company/contact", label: "Contact" },
     ],
   },
@@ -46,9 +43,10 @@ export default function Footer() {
         <div className="grid grid-cols-[1.4fr_repeat(4,1fr)] max-[900px]:grid-cols-2 gap-8 pb-11 border-b-[0.5px] border-white/10">
           <div>
             <Logo variant="white" height={20} />
-            <p className="text-sm text-[#8493B4] max-w-[30ch] mt-4">
+            <p className="text-sm text-[#8493B4] max-w-[30ch] mt-4 mb-6">
               Fully automated spec-driven development. The spec is the source of truth; the code regenerates.
             </p>
+            <NewsletterSignup />
           </div>
           {COLUMNS.map((col) => (
             <div key={col.title}>
@@ -81,9 +79,11 @@ export default function Footer() {
         </div>
         <div className="flex justify-between items-center pt-6.5 text-[13px] text-[#7C8AAB] flex-wrap gap-3.5">
           <span>© 2026 *codeplain. All rights reserved.</span>
-          <div className="flex gap-5">
+          <div className="flex items-center gap-5">
             <Link href="/legal/privacy" className="hover:text-white">Privacy</Link>
             <Link href="/legal/terms" className="hover:text-white">Terms</Link>
+            <Link href="/legal/cookies" className="hover:text-white">Cookies</Link>
+            <span className="h-3.5 w-px bg-white/15" aria-hidden="true" />
             <a
               href="https://github.com/Codeplain-ai"
               target="_blank"

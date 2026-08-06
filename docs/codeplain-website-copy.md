@@ -12,7 +12,7 @@ A page-by-page copy deck, driven by the Integrations Forge sales pitch (July 202
 
 ## Brand vocabulary (from the pitch — hold consistently)
 
-- **\*codeplain** — the company and platform. **Decision: write it with the mark (`*codeplain`) in all body copy**, including sentence starts and nav labels. Exceptions where the mark is dropped: URLs (`codeplain.ai`, `/why-codeplain`), the email (`info@codeplain.ai`), the GitHub org (`Codeplain-ai`), the social handle (`@codeplain`), and accessibility labels (a screen reader would read the asterisk aloud as "star").
+- **\*codeplain** — the company and platform. **Decision: write it with the mark (`*codeplain`) in all body copy**, including sentence starts and nav labels. Exceptions where the mark is dropped: URLs (`codeplain.ai`, `/codeplain`), the email (`info@codeplain.ai`), the GitHub org (`Codeplain-ai`), the social handle (`@codeplain`), and accessibility labels (a screen reader would read the asterisk aloud as "star").
 - **Plain** (the specification language) — left as **Plain** for now. The deck styles it `***plain` (files end `.plain`). `[confirm: apply the ***plain mark to the language too? — say the word and I'll sweep it the same way]`
 - **the *codeplain renderer** — the engine. It **renders** production-ready code from reviewed specs. "Rendering credits" are the unit of usage.
 - **phoenix architecture** — the mindset, introduced by **Chad Fowler**: regenerate code, don't maintain it; preserve intent in specs; review one level up.
@@ -26,30 +26,37 @@ Top-level items are the nav bar. Indented items are dropdown children. The two C
 
 ```
 /
-├── Why *codeplain          /why-codeplain
-├── Platform                /platform
+├── Why Plain               /plain
+├── Why Codeplain           /codeplain
 ├── Solutions          ▾    /solutions
 │   ├── Integrations Forge   /solutions/integrations-forge    ● available
-│   └── Web Scraping         /solutions/web-scraping          ○ coming soon
+│   └── Web Scraper          /solutions/web-scraper           ○ coming soon
 ├── Learn              ▾    /learn
+│   ├── Documentation        /learn/documentation
+│   ├── Resources            /learn/resources
 │   ├── Blog                 /learn/blog
-│   ├── Events               /learn/events
-│   └── Docs                 /learn/docs                      ↗ link out / subdomain
+│   └── Events               /learn/events
 └── Company            ▾    /company
-    ├── About                /company/about
-    ├── Customers            /company/customers
     ├── Press                /company/press
-    ├── Careers              /company/careers
     └── Contact              /company/contact
 
 CTAs  (right of the bar)
 ├── Book a demo             /book-a-demo
 └── Get started             /get-started        [primary]
 
-Utility  (not in nav)
-├── Privacy                 /legal/privacy
-├── Terms                   /legal/terms
+Not in nav (still live, linkable by URL)
+├── About                   /company/about
+├── Customers               /company/customers
+├── Careers                 /company/careers
+├── Privacy Policy          /legal/privacy
+├── Terms of Service        /legal/terms
+├── Cookie Policy           /legal/cookies
 └── 404                     /404
+
+Footer (mirrors the main nav, plus)
+├── Legal — Privacy Policy · Terms of Service · Cookie Policy
+├── Social — GitHub `[confirm: LinkedIn/other social URLs — not added, unconfirmed]`
+└── Newsletter signup `[note: static front-end mock — wire to a real list provider before launch]`
 ```
 
 ---
@@ -62,16 +69,13 @@ Utility  (not in nav)
 **Nav bar (top level):** Why *codeplain · Platform · Solutions · Learn · Company — plus **Book a demo** and **Get started** buttons. Full structure in the Navigation tree above.
 
 ### Hero
-- **H1:** Code should be regenerated, not maintained.
-- **Subhead:** Plain is the source of truth. The *codeplain renderer turns it into production code with no human in the loop. When something breaks, you regenerate — you don't maintain.
-- **Buttons:** See the platform · Book a demo
-- **Terminal:**
-  ```
-  $ npx plain-forge init
-  ✓ researching api
-  ✓ drafting spec
-  ✓ rendering code
-  ```
+- **H1:** AI writes Code. Humans write Intent.
+- **Subhead:** Codeplain puts your team back in control of agentic coding through specification-driven development.
+- **Buttons:** Learn more · Talk to us
+- **Visual — before/after, spec as the control point:**
+  - Before (prompt-driven): one prompt, a different result each time · steering lives in someone's head, or a Slack thread · reviewers read code line by line, after it's written.
+  - After (spec-driven): one spec, the same result every time · steering lives in a file the whole team can read · reviewers read the spec, before a line is written.
+  - Divider badge: "the spec is the control point"
 
 ### Credibility strip
 - **Trusted by (logo wall):** Incode · DevRev · Shovels.ai `[note: rendered as typographic wordmarks in the site's own type, not the companies' official logo files — swap in real SVGs if/when available, and confirm each is cleared to display]`
@@ -86,43 +90,41 @@ Utility  (not in nav)
 - **Card A — what you keep / The spec:** A structured, human-readable description of how the software should behave. It's the source of truth — the thing you review, evolve, and maintain.
 - **Card B — what's disposable / The code:** An implementation detail. Rendered from the spec on demand — and thrown away and regenerated when requirements change or something breaks.
 
-### Four-pillar value model
-- **Kicker:** The model
-- **H2:** Specifications are the source of truth.
-- **Intro:** Four principles hold whatever you build on *codeplain.
-- **01 Source of truth** — Edit the spec, not the code. Intent lives in one place instead of scattered across an implementation.
-- **02 Regenerate, don't maintain** — Code is ephemeral. When requirements change or something breaks, re-render it from the spec.
-- **03 Review one level up** — Read what the software should do, not how. Specs are far easier to reason about than the code they produce.
-- **04 Preserve provenance** — The reasoning behind the software stays in the spec — not lost the moment someone hand-edits the output.
+### Section 1 — The Promise
+- **Kicker:** The promise
+- **H2:** Control at Speed
+- **Intro:** Without Integrations Forge, agentic coding is prone to uneven results across developers and we attempt to fix it with more code reviews. You never see the 10x productivity that AI claims.
+- **Collapse the Generation Loop** — Move steering out of a prompt and into a spec. You write it once, uniquely for your use case. Days compress to hours.
+- **Review Specs, Not Code** — Catch problems before a single line is written. Gain shared understanding and peace of mind earlier in the process.
+- **Maintenance Gets Easier** — Updating specs focuses on behavior and boundaries, not syntax. Upgrading frameworks no longer requires understanding implementation details.
 
-### Platform + Solutions
-- **Kicker:** The platform
-- **H2:** One platform. Purpose-built solutions on top.
-- **Intro:** *codeplain is the renderer that turns specs into production code. Solutions are products built on it — aimed at the work that breaks most often.
-- **Foundation — the *codeplain platform:** Specs in. Production code out. *Open by design, model-efficient, validated before a human ever sees it.*
-  - **Plain** — The open-source specification language. Express intent at any level of detail.
-  - **The *codeplain renderer** — Renders production code from reviewed specs and validates output before you see it.
-  - **plain-forge** — Open-source agentic skills. Coding agents research, draft, and maintain specs, one feature at a time.
-- **Built on the platform — solutions:**
-  - **Integrations Forge** `available` — Build and maintain software integrations at scale. Regenerate when the upstream API changes.
-  - **Web Scraping** `coming soon` — Scrapers that survive site changes by regenerating from the spec.
+### Section 2 — Solutions
+- **Kicker:** Solutions
+- **H2:** Built for Scaling AI Coding
+- **Subhead:** Whether you're building integrations or automating data work, Codeplain gives you the tools to do it reliably.
+- **Integrations Forge** — icon: connection nodes / API handshake. Copy: Ship integrations faster, maintain them with confidence. CTA: Explore Integrations Forge.
+- **Web Scraper** — icon: web crawl / data extraction. Copy: Automate web data work safely and reliably. CTA: Explore Web Scraper.
 
-### Why it's different
-- **Kicker:** Why it's different
-- **H2:** No black box, no lock-in.
-- **Open by default** — Plain and plain-forge are open source. Read the language and the tooling — nothing is hidden.
-- **Model-efficient** — Generating specs uses 5–10× fewer tokens. Cheap, fast models render; frontier models research. You don't pay frontier prices to ship code.
-- **Not framework-locked** — Regenerate to the stack you need. The spec outlives any single implementation.
+### Section 3 — Why It Works
+- **Kicker:** Why it works
+- **H2:** Specs Drive Everything
+- **Subhead:** Plain is the specification language that gives structure to agentic coding.
+- **Specifications Are Maintainable** — Code blends requirements with implementation. Specs separate behavior and boundaries from preferences and library specifics.
+- **Reusable Across Teams** — Without standardization, developers invent their own tools. Plain makes agentic coding a team sport.
+- **Automatic Validation** — Specs enable automatic code validation against intent. Catch subtle bugs during spec review, not production.
 
 ### Point of view
 - **H2:** The spec is the asset. The code is ash.
 - **Body:** This is the bet behind phoenix architecture — the model coined by Chad Fowler that *codeplain is built on. As implementation becomes cheap to generate, the durable layer of software moves up into specifications and intent, and the code becomes something you regenerate on demand — like a phoenix from its own ashes.
 - **Link:** Read our point of view →
 
-### Testimonial + proof
-- **Stat:** From **2 weeks to 1 day** per integration.
-- **Quote:** *codeplain helped us seamlessly integrate our recent acquisition into Incode's platform, freeing developers from drudge work.
-- **Attribution:** Jovan Jovanović, CTO, Incode `[confirm: name spelling]`
+### Section 4 — Proof
+- **Kicker:** Proof
+- **H2:** 14× Faster. Same Quality. Full Control.
+- **Subhead:** Incode Technologies scaled from 20 to 200 integrations while maintaining safety and consistency.
+- **Customer quote:** Codeplain is helping us seamlessly integrate our recent acquisition into Incode's platform, freeing developers from drudge work. — Jovan Jovanović, CTO, Incode `[confirm: name spelling]`
+- **Ecosystem quote:** The bigger payoff comes when fixing and maintaining happens in the background and your teams can focus on building. That's when you start doing things that weren't even in range before. — Boris Cherny, creator of Claude Code
+- **Key metrics:** ⚡ 2 weeks → 1 day per integration · 📋 Code reviews → Spec reviews (caught earlier) · 🔄 Manual API updates → Automatic updates · 👥 Ad-hoc workflows → Unified spec-driven process
 
 ### How it works
 - **Kicker:** How it works
@@ -139,10 +141,11 @@ Utility  (not in nav)
 - Open source — plain-forge on GitHub → View the repo
 - Language — The Plain specification language → plainlang.org
 
-### Final CTA
-- **H2:** Stop maintaining code you never wanted to keep.
-- **Buttons:** Book a demo · See the platform
-- **Subline:** New users get 50 rendering credits.
+### Section 5 — Final CTA
+- **H2:** Put your team back in control.
+- **Primary:** Get Started with Integrations Forge (→ /solutions/integrations-forge)
+- **Secondary:** Explore the Documentation (→ /learn/documentation)
+- **Tertiary:** Schedule a Demo (→ /book-a-demo)
 
 ### Footer
 - **Tagline:** Fully automated spec-driven development. The spec is the source of truth; the code regenerates.
@@ -201,7 +204,7 @@ Or go to codeplain.ai.
 
 ---
 
-## `/why-codeplain` — DRAFT (platform pillar / VC + technical buyer)
+## `/codeplain` — DRAFT (platform pillar / VC + technical buyer)
 
 - **Eyebrow:** our point of view
 - **H1:** Code should be regenerated, not maintained.
@@ -226,7 +229,7 @@ Incode cut integration work from about two weeks to a single day per integration
 
 ---
 
-## `/platform` — DRAFT (deep technical / engineer)
+## `/plain` — DRAFT (deep technical / engineer)
 
 - **Eyebrow:** the platform
 - **H1:** Specs in. Production code out.
@@ -256,7 +259,7 @@ Incode cut integration work from about two weeks to a single day per integration
 
 ---
 
-## `/solutions/web-scraping` — DRAFT (coming soon)
+## `/solutions/web-scraper` — DRAFT (coming soon)
 
 - **H1:** Scrapers that don't break when the site does.
 - **Subhead:** Same idea as Integrations Forge, pointed at the web. Describe what to extract in a Plain spec; regenerate the scraper when the page changes. Coming soon.

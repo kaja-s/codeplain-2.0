@@ -5,20 +5,23 @@ export default function FinalCta() {
   return (
     <section className="py-24 max-[760px]:py-16.5 bg-navy text-white text-center">
       <Container>
-        <h2 className="text-[clamp(28px,4vw,42px)] leading-[1.08] max-w-[18ch] mx-auto mb-7.5">
-          Stop maintaining code you never wanted to keep.
+        <h2 className="text-[clamp(28px,4vw,42px)] leading-[1.08] max-w-[20ch] mx-auto mb-7.5">
+          Put your team back in control.
         </h2>
-        <div className="flex gap-3 justify-center flex-wrap">
-          <Button href="/book-a-demo" variant="onnavy">
-            Book a demo
+        <div className="flex gap-3 justify-center flex-wrap mb-5.5">
+          <Button href="/solutions/integrations-forge" variant="onnavy">
+            Get Started with Integrations Forge
           </Button>
-          <Button href="/platform" variant="onnavy-ghost">
-            See the platform
+          <Button href="/learn/documentation" variant="onnavy-ghost">
+            Explore the Documentation
           </Button>
         </div>
-        <p className="font-mono mt-5.5 text-sm text-[#AEBBD6]">
-          New users get 50 rendering credits.
-        </p>
+        <a
+          href="/book-a-demo"
+          className="font-mono text-sm text-[#AEBBD6] border-b border-[#AEBBD6]/50 hover:text-white hover:border-white transition-colors"
+        >
+          Schedule a Demo →
+        </a>
       </Container>
     </section>
   );

@@ -3,16 +3,16 @@ import SectionHead from "@/components/SectionHead";
 
 const DIFFERENTIATORS: { title: string; body: string }[] = [
   {
-    title: "Open by default",
-    body: "∗∗∗plain and plain-forge are open source. Read the language and the tooling. Nothing is hidden.",
+    title: "Specifications Are Maintainable",
+    body: "Code blends requirements with implementation. Specs separate behavior and boundaries from preferences and library specifics.",
   },
   {
-    title: "Model-efficient",
-    body: "Generating specs uses 5–10× fewer tokens. Cheap, fast models do generation; frontier models do research.",
+    title: "Reusable Across Teams",
+    body: "Without standardization, developers invent their own tools. Plain makes agentic coding a team sport.",
   },
   {
-    title: "Not framework-locked",
-    body: "Regenerate to the stack you need. The spec outlives any single implementation.",
+    title: "Automatic Validation",
+    body: "Specs enable automatic code validation against intent. Catch subtle bugs during spec review, not production.",
   },
 ];
 
@@ -22,9 +22,12 @@ export default function Differentiators() {
       <Container>
         <SectionHead
           className="mx-auto text-center"
-          kicker="Why it's different"
-          title="No black box, no lock-in."
-        />
+          kicker="Why it works"
+          title="Specs Drive Everything"
+        >
+          Plain is the specification language that gives structure to agentic
+          coding.
+        </SectionHead>
         <div className="grid grid-cols-3 max-[760px]:grid-cols-1 gap-5">
           {DIFFERENTIATORS.map((d) => (
             <div key={d.title} className="border-l-2 border-accent pl-5 py-1">

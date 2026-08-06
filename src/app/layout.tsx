@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "*codeplain: Code should be regenerated, not maintained",
+  title: "Codeplain: AI writes Code. Humans write Intent.",
   description:
-    "Plain is the source of truth. *codeplain turns it into production code with no human in the loop. When something breaks, you regenerate. You don't maintain.",
+    "Codeplain puts your team back in control of agentic coding through specification-driven development.",
 };
 
 export default function RootLayout({
