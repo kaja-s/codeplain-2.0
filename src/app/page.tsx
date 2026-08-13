@@ -6,23 +6,19 @@ import Pillars from "@/components/sections/Pillars";
 import PlatformSolutions from "@/components/sections/PlatformSolutions";
 import Differentiators from "@/components/sections/Differentiators";
 import Testimonial from "@/components/sections/Testimonial";
-import HowItWorks from "@/components/sections/HowItWorks";
-import Resources from "@/components/sections/Resources";
 import FinalCta from "@/components/sections/FinalCta";
 
 export default function Home() {
   return (
     <>
       <Header />
-      <main>
+      <main className="bg-white text-[#1a1a1a]">
         <Hero />
         <Logos />
         <Pillars />
         <PlatformSolutions />
         <Differentiators />
         <Testimonial />
-        <HowItWorks />
-        <Resources />
         <FinalCta />
       </main>
       <Footer />

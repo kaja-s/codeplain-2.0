@@ -3,10 +3,10 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Container from "@/components/Container";
 import PageHero from "@/components/PageHero";
+import Button from "@/components/Button";
 
 export const metadata: Metadata = {
   title: "Events | *codeplain",
-  description: "Talks, demos, and where to find *codeplain in person.",
 };
 
 export default function Events() {
@@ -14,12 +14,12 @@ export default function Events() {
     <>
       <Header />
       <main>
-        <PageHero eyebrow="Learn · Events" title="No events on the calendar yet.">
-          We&apos;ll list talks, demos, and meetups here as they&apos;re scheduled. Want us at your event? Get in touch.
+        <PageHero eyebrow="Learn · Events" title="This page is coming together.">
+          We&apos;re rebuilding this page. Head back to the homepage in the meantime.
         </PageHero>
         <section className="pb-20">
           <Container>
-            <a href="/company/contact" className="font-mono text-sm text-accent border-b border-accent pb-0.5">Contact us →</a>
+            <Button href="/" variant="primary">Back home</Button>
           </Container>
         </section>
       </main>

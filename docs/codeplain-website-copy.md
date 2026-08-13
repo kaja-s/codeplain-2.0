@@ -2,6 +2,8 @@
 
 A page-by-page copy deck, driven by the Integrations Forge sales pitch (July 2026). The homepage is **synced to the built `index.html`**. Sub-pages are **draft** copy. Facts confirmed by the deck are now unmarked; anything still open is flagged `[confirm: …]`.
 
+**Current build state (2026-08-12):** by design, only the homepage carries real content right now. Every other route still exists (so nav/footer links and bookmarks resolve) but renders a minimal "this page is coming together" placeholder instead of the copy documented below for that page — treat the sub-page sections in this doc as the content to restore when each page is rebuilt, not as what's currently live.
+
 ---
 
 ## Voice & tone
@@ -24,13 +26,15 @@ A page-by-page copy deck, driven by the Integrations Forge sales pitch (July 202
 
 Top-level items are the nav bar. Indented items are dropdown children. The two CTAs sit on the right of the bar. Utility pages aren't in the nav.
 
+Why Plain, Why Codeplain, and Solutions currently point at anchors on the homepage (`/#why-plain`, `/#why-codeplain`, `/#solutions`) rather than their own pages, since those pages are placeholder stubs for now. Learn and Company still link to their real routes — those are just stubs too, but there's no homepage section to anchor them to instead.
+
 ```
 /
-├── Why Plain               /plain
-├── Why Codeplain           /codeplain
-├── Solutions          ▾    /solutions
-│   ├── Integrations Forge   /solutions/integrations-forge    ● available
-│   └── Web Scraper          /solutions/web-scraper           ○ coming soon
+├── Why Plain               /#why-plain
+├── Why Codeplain           /#why-codeplain
+├── Solutions                /#solutions
+│   ├── Integrations Forge   /solutions/integrations-forge    ● available (stub)
+│   └── Web Scraper          /solutions/web-scraper           ○ coming soon (stub)
 ├── Learn              ▾    /learn
 │   ├── Documentation        /learn/documentation
 │   ├── Resources            /learn/resources
@@ -42,7 +46,7 @@ Top-level items are the nav bar. Indented items are dropdown children. The two C
 
 CTAs  (right of the bar)
 ├── Book a demo             /book-a-demo
-└── Get started             /get-started        [primary]
+└── Get staruse theted             /get-started        [primary]
 
 Not in nav (still live, linkable by URL)
 ├── About                   /company/about
@@ -55,7 +59,7 @@ Not in nav (still live, linkable by URL)
 
 Footer (mirrors the main nav, plus)
 ├── Legal — Privacy Policy · Terms of Service · Cookie Policy
-├── Social — GitHub `[confirm: LinkedIn/other social URLs — not added, unconfirmed]`
+├── Social — LinkedIn · GitHub
 └── Newsletter signup `[note: static front-end mock — wire to a real list provider before launch]`
 ```
 
@@ -125,21 +129,6 @@ Footer (mirrors the main nav, plus)
 - **Customer quote:** Codeplain is helping us seamlessly integrate our recent acquisition into Incode's platform, freeing developers from drudge work. — Jovan Jovanović, CTO, Incode `[confirm: name spelling]`
 - **Ecosystem quote:** The bigger payoff comes when fixing and maintaining happens in the background and your teams can focus on building. That's when you start doing things that weren't even in range before. — Boris Cherny, creator of Claude Code
 - **Key metrics:** ⚡ 2 weeks → 1 day per integration · 📋 Code reviews → Spec reviews (caught earlier) · 🔄 Manual API updates → Automatic updates · 👥 Ad-hoc workflows → Unified spec-driven process
-
-### How it works
-- **Kicker:** How it works
-- **H2:** Write it once. Regenerate as often as you need.
-- **Step 01 — Draft the spec:** Developers use agentic skills (plain-forge) to research APIs, ask clarifying questions, and evolve the spec — one feature at a time.
-- **Step 02 — Render the code:** The *codeplain renderer generates production-ready software from the reviewed spec and validates it before you see it.
-- **Step 03 — When it breaks, regenerate:** An upstream change breaks the code, not the spec. Re-render from the same spec instead of patching.
-- **Proof:** Because specs encode intent rather than implementation, generating them uses 5–10× fewer tokens and holds larger problems in a single context window. *codeplain renders on faster, cheaper models and saves frontier models for research. Think of the TypeScript compiler: let the specialized tool do the translation, and let the frontier model do what it's good at.
-
-### Go deeper
-- **H2:** Read the thinking, and the code.
-- Article — Code should be regenerated, not maintained → The New Stack
-- Essays — Regenerative Software & the Phoenix Architecture → Read the series
-- Open source — plain-forge on GitHub → View the repo
-- Language — The Plain specification language → plainlang.org
 
 ### Section 5 — Final CTA
 - **H2:** Put your team back in control.

@@ -18,7 +18,7 @@ const DIFFERENTIATORS: { title: string; body: string }[] = [
 
 export default function Differentiators() {
   return (
-    <section className="py-24 max-[760px]:py-16.5">
+    <section id="why-plain" className="py-24 max-[760px]:py-16.5 scroll-mt-20">
       <Container>
         <SectionHead
           className="mx-auto text-center"
@@ -30,9 +30,9 @@ export default function Differentiators() {
         </SectionHead>
         <div className="grid grid-cols-3 max-[760px]:grid-cols-1 gap-5">
           {DIFFERENTIATORS.map((d) => (
-            <div key={d.title} className="border-l-2 border-accent pl-5 py-1">
-              <h3 className="text-lg mb-2.5">{d.title}</h3>
-              <p className="text-text-body text-[14.5px]">{d.body}</p>
+            <div key={d.title} className="border-l-2 border-[#0A1FD4] pl-5 py-1">
+              <h3 className="text-lg mb-2.5 text-[#1a1a1a]">{d.title}</h3>
+              <p className="text-[#4a5678] text-[14.5px]">{d.body}</p>
             </div>
           ))}
         </div>

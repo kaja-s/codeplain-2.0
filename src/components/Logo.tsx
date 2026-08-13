@@ -5,7 +5,7 @@ type LogoProps = {
 };
 
 export default function Logo({
-  variant = "ink",
+  variant = "white",
   height = 22,
   className,
 }: LogoProps) {

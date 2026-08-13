@@ -46,10 +46,10 @@ const SOLUTIONS: Solution[] = [
   {
     name: "Integrations Forge",
     icon: <ConnectionIcon />,
-    bg: "bg-[#EEF3FD]",
+    bg: "bg-white border border-black/10",
     copy: "Ship integrations faster, maintain them with confidence.",
     cta: {
-      label: "Explore Integrations Forge",
+      label: "Get Started with Integrations Forge",
       href: "/solutions/integrations-forge",
       variant: "primary",
     },
@@ -57,7 +57,7 @@ const SOLUTIONS: Solution[] = [
   {
     name: "Web Scraper",
     icon: <CrawlIcon />,
-    bg: "bg-[#F5F6F9]",
+    bg: "bg-black/[0.02] border border-black/10",
     copy: "Automate web data work safely and reliably.",
     cta: {
       label: "Explore Web Scraper",
@@ -69,16 +69,16 @@ const SOLUTIONS: Solution[] = [
 
 export default function PlatformSolutions() {
   return (
-    <section className="py-24 max-[760px]:py-16.5 bg-navy-deep">
+    <section id="solutions" className="py-24 max-[760px]:py-16.5 bg-black/[0.02] scroll-mt-20">
       <Container>
         <div className="max-w-[52ch] mx-auto text-center mb-13">
-          <p className="font-mono text-xs tracking-wide text-accent-bright uppercase mb-4">
+          <p className="font-mono text-xs tracking-wide text-[#0A1FD4] uppercase mb-4">
             Solutions
           </p>
-          <h2 className="text-[clamp(27px,3.6vw,38px)] leading-[1.1] font-medium tracking-tight mb-4 text-white">
+          <h2 className="text-[clamp(27px,3.6vw,38px)] leading-[1.1] font-medium tracking-tight mb-4 text-[#1a1a1a]">
             Built for Scaling AI Coding
           </h2>
-          <p className="text-lg text-[#AEBBD6]">
+          <p className="text-lg text-[#4a5678]">
             Whether you&apos;re building integrations or automating data work,
             Codeplain gives you the tools to do it reliably.
           </p>
@@ -90,15 +90,15 @@ export default function PlatformSolutions() {
               key={s.name}
               className={`flex flex-col rounded-[28px] p-9 max-[760px]:p-7 ${s.bg}`}
             >
-              <div className="flex h-14 w-14 items-center justify-center rounded-full bg-white text-accent">
+              <div className="flex h-14 w-14 items-center justify-center rounded-full bg-black/[0.05] text-[#0A1FD4]">
                 {s.icon}
               </div>
 
-              <h3 className="mt-6 text-[clamp(24px,3vw,32px)] leading-[1.08] font-medium">
+              <h3 className="mt-6 text-[clamp(24px,3vw,32px)] leading-[1.08] font-medium text-[#1a1a1a]">
                 {s.name}
               </h3>
 
-              <p className="mt-4 text-[16.5px] leading-snug text-text-body max-w-[42ch]">
+              <p className="mt-4 text-[16.5px] leading-snug text-[#4a5678] max-w-[42ch]">
                 {s.copy}
               </p>
 
@@ -106,7 +106,11 @@ export default function PlatformSolutions() {
                 <Button
                   href={s.cta.href}
                   variant={s.cta.variant}
-                  className="!rounded-full !px-7"
+                  className={
+                    s.cta.variant === "ghost"
+                      ? "!border-black/20 !text-[#1a1a1a] hover:!border-black/40 hover:!bg-black/[0.04] !px-7"
+                      : "!px-7"
+                  }
                 >
                   {s.cta.label}
                 </Button>
