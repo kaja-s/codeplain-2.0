@@ -29,16 +29,19 @@
 }
 
 @theme {
-  --color-navy: #0e2350;
-  --color-navy-deep: #0a1a3c;
-  --color-accent: #2a5bd7;
-  --color-accent-bright: #6e9bff;
+  /* Brand palette (Figma "Brand Colors"): black background, yellow as the
+     primary CTA/accent. navy-deep reuses the brand's dark green for subtle
+     depth between sections on an otherwise all-black page. */
+  --color-navy: #1a1a1a;
+  --color-navy-deep: #223936;
+  --color-accent: #e0ff6e;
+  --color-accent-bright: #e0ff6e;
   --color-logo-ink: #1a1a1a;
-  --color-text-body: #4a5678;
-  --color-muted: #8792ac;
-  --color-line: #eaf0fa;
-  --color-line-2: #e1e8f5;
-  --color-tint: #f5f8fd;
+  --color-text-body: #aebbd6;
+  --color-muted: #7c8aab;
+  --color-line: rgba(255, 255, 255, 0.1);
+  --color-line-2: rgba(255, 255, 255, 0.16);
+  --color-tint: rgba(255, 255, 255, 0.05);
 
   --font-sans: "PP Neue Montreal", -apple-system, BlinkMacSystemFont,
     "Segoe UI", Helvetica, Arial, sans-serif;
@@ -53,8 +56,8 @@ html {
 }
 
 body {
-  background: #ffffff;
-  color: var(--color-navy);
+  background: var(--color-navy);
+  color: #ffffff;
   font-family: var(--font-sans);
   line-height: 1.55;
   -webkit-font-smoothing: antialiased;
@@ -101,5 +104,16 @@ select {
 @keyframes blink {
   50% {
     opacity: 0;
+  }
+}
+
+@keyframes pr-row-enter {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
