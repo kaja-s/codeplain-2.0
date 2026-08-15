@@ -1,15 +1,18 @@
 "use client";
 
 /*
-  Toggle wrapper around the hero visual. Only one variant exists today
-  (Claude Code PRs / *plain spec) — add more entries to VARIANTS to expand
-  the toggle later without touching Hero.tsx.
+  Toggle wrapper around the hero visual. Add more entries to VARIANTS to
+  expand the toggle later without touching Hero.tsx.
 */
 
 import { useState } from "react";
 import HeroVisual from "@/components/HeroVisual";
+import HeroVisualSourceOfTruth from "@/components/HeroVisualSourceOfTruth";
 
-const VARIANTS = [{ id: "claude-code-prs", label: "Claude Code PRs", Component: HeroVisual }] as const;
+const VARIANTS = [
+  { id: "claude-code-prs", label: "v1", Component: HeroVisual },
+  { id: "source-of-truth", label: "v3", Component: HeroVisualSourceOfTruth },
+] as const;
 
 type VariantId = (typeof VARIANTS)[number]["id"];
 
@@ -20,6 +23,7 @@ export default function HeroVisualToggle() {
 
   return (
     <div className="flex w-full flex-col items-center gap-6">
+      <ActiveComponent />
       {VARIANTS.length > 1 && (
         <div className="flex flex-wrap justify-center gap-2 normal-case">
           {VARIANTS.map((v) => (
@@ -38,7 +42,6 @@ export default function HeroVisualToggle() {
           ))}
         </div>
       )}
-      <ActiveComponent />
     </div>
   );
 }
