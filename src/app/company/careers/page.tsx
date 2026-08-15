@@ -3,7 +3,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Container from "@/components/Container";
 import PageHero from "@/components/PageHero";
-import Button from "@/components/Button";
+import { PrimaryButton } from "@/components/Buttons";
 
 export const metadata: Metadata = {
   title: "Careers | *codeplain",
@@ -19,7 +19,7 @@ export default function Careers() {
         </PageHero>
         <section className="pb-20">
           <Container>
-            <Button href="/" variant="primary">Back home</Button>
+            <PrimaryButton href="/">Back home</PrimaryButton>
           </Container>
         </section>
       </main>

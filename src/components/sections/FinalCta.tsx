@@ -1,24 +1,24 @@
 import Container from "@/components/Container";
-import Button from "@/components/Button";
+import { PrimaryButton, SecondaryButton } from "@/components/Buttons";
 
 export default function FinalCta() {
   return (
-    <section className="py-24 max-[760px]:py-16.5 bg-black/[0.02] border-t border-black/10 text-[#1a1a1a] text-center">
+    <section className="py-24 max-md:py-16.5 bg-black/2 border-t border-black/10 text-ink text-center">
       <Container>
         <h2 className="text-[clamp(28px,4vw,42px)] leading-[1.08] max-w-[20ch] mx-auto mb-7.5">
           Put your team back in control.
         </h2>
         <div className="flex gap-3 justify-center flex-wrap mb-5.5">
-          <Button href="/solutions/integrations-forge" variant="primary">
+          <PrimaryButton href="/solutions/integrations-forge">
             Get Started with Integrations Forge
-          </Button>
-          <Button href="/book-a-demo" variant="onnavy-ghost">
+          </PrimaryButton>
+          <SecondaryButton href="/book-a-demo">
             Schedule a Demo
-          </Button>
+          </SecondaryButton>
         </div>
         <a
           href="/learn/documentation"
-          className="font-mono text-sm text-[#4a5678] border-b border-[#4a5678]/40 hover:text-[#1a1a1a] hover:border-[#1a1a1a] transition-colors"
+          className="font-mono text-sm text-ink-muted border-b border-ink-muted/40 hover:text-ink hover:border-ink transition-colors"
         >
           Explore Documentation →
         </a>
