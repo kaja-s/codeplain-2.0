@@ -8,8 +8,8 @@ export const metadata: Metadata = {
 
 export default function HeroVisualReview() {
   return (
-    <main className="min-h-screen bg-white px-8 py-16 text-[#1a1a1a] max-[760px]:px-6">
-      <div className="mx-auto max-w-[1120px]">
+    <main className="min-h-screen bg-white px-8 py-16 text-ink max-md:px-6">
+      <div className="mx-auto max-w-(--container-content)">
         <h1 className="mb-1 text-[22px] font-medium normal-case">Hero visual review</h1>
         <p className="mb-10 text-[14px] normal-case text-black/50">
           Before (Claude Code PRs) | After (*plain spec, consistent).

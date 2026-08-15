@@ -288,18 +288,18 @@ export default function HeroVisual() {
 
   return (
     <div className="normal-case">
-      <div className="grid w-full grid-cols-2 overflow-hidden border border-black/10 bg-white shadow-[0_24px_60px_-24px_rgba(20,20,30,0.15)] max-[640px]:grid-cols-1">
+      <div className="grid w-full grid-cols-2 overflow-hidden border border-black/10 bg-white shadow-[0_24px_60px_-24px_rgba(20,20,30,0.15)] max-sm:grid-cols-1">
         {/* Left — company/pulls */}
         <div className="flex flex-col">
           <div className="flex h-14 items-center justify-between border-b border-black/10 px-6">
             <div className="flex items-center gap-2.5">
-              <span aria-hidden="true" className="h-5 w-5 bg-[#0A1FD4]" />
+              <span aria-hidden="true" className="h-5 w-5 bg-brand-blue" />
               <span className="font-mono text-[14px]">
                 <span className="text-black/40">company/</span>
                 <span className="font-medium text-black/85">pulls</span>
               </span>
             </div>
-            <span className="flex h-4 items-center gap-1.5 rounded-full border border-[#0A1FD4] bg-[#0A1FD4]/10 px-2 font-mono text-[11px] text-[#0A1FD4]">
+            <span className="flex h-4 items-center gap-1.5 rounded-full border border-brand-blue bg-brand-blue/10 px-2 font-mono text-[11px] text-brand-blue">
               <IconGitPullRequest className="h-3 w-3" />
               <span className="font-semibold">11 open</span>
             </span>
@@ -348,7 +348,7 @@ export default function HeroVisual() {
         </div>
 
         {/* Right — the real *plain spec, scrambles into place on load */}
-        <div className="flex flex-col border-l border-black/10 max-[640px]:border-l-0 max-[640px]:border-t">
+        <div className="flex flex-col border-l border-black/10 max-sm:border-l-0 max-sm:border-t">
           <div className="flex h-14 items-center justify-between border-b border-black/10 px-6">
             <div className="flex items-center gap-1.5">
               <span className="h-2.5 w-2.5 rounded-full border border-black/15" />
@@ -378,7 +378,7 @@ export default function HeroVisual() {
               <ScrambleText
                 text="***definitions***"
                 delay={nextDelay()}
-                className="block font-bold text-[#0A1FD4]"
+                className="block font-bold text-brand-blue"
               />
               <div className="flex flex-col text-black/60">
                 <ScrambleText
@@ -395,7 +395,7 @@ export default function HeroVisual() {
               <ScrambleText
                 text="***functional specs***"
                 delay={nextDelay()}
-                className="block font-bold text-[#0A1FD4]"
+                className="block font-bold text-brand-blue"
               />
               <div className="flex flex-col text-black/60">
                 <ScrambleText
@@ -418,7 +418,7 @@ export default function HeroVisual() {
             </div>
             <div className="mt-5">
               <span className="inline-flex items-center gap-2 rounded-full border border-black/10 bg-white px-3 py-1.5 font-mono text-[11px] text-black/70 shadow-[0_1px_2px_rgba(20,20,30,0.06)]">
-                <span className="flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-[#0A1FD4]">
+                <span className="flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-brand-blue">
                   <svg
                     viewBox="0 0 24 24"
                     width="9"

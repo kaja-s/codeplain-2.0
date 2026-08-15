@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <>
       <Header />
-      <main className="bg-white text-[#1a1a1a]">
+      <main className="bg-white text-ink">
         <Hero />
         <Logos />
         <Pillars />

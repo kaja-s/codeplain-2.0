@@ -8,7 +8,7 @@ export default function Container({
   className?: string;
 }) {
   return (
-    <div className={`mx-auto max-w-(--container-content) px-8 max-[760px]:px-[22px] ${className}`}>
+    <div className={`mx-auto max-w-(--container-content) px-8 max-md:px-5.5 ${className}`}>
       {children}
     </div>
   );

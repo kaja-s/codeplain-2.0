@@ -32,23 +32,43 @@
   /* Brand palette (Figma "Brand Colors"): black background, yellow as the
      primary CTA/accent. navy-deep reuses the brand's dark green for subtle
      depth between sections on an otherwise all-black page. */
-  --color-navy: #1a1a1a;
+  --color-black: #1a1a1a;
   --color-navy-deep: #223936;
   --color-accent: #e0ff6e;
   --color-accent-bright: #e0ff6e;
-  --color-logo-ink: #1a1a1a;
   --color-text-body: #aebbd6;
   --color-muted: #7c8aab;
   --color-line: rgba(255, 255, 255, 0.1);
   --color-line-2: rgba(255, 255, 255, 0.16);
   --color-tint: rgba(255, 255, 255, 0.05);
 
+  /* Light-theme palette (homepage + v2 pages, see CLAUDE.md "Theme" section).
+     ink/ink-muted/ink-faint form a text-emphasis scale from darkest to lightest. */
+  --color-ink: #1a1a1a;
+  --color-ink-muted: #4a5678;
+  --color-ink-faint: #5b6b8c;
+  --color-brand-blue-50: #f0f1ff;
+  --color-brand-blue-100: #e1e4fe;
+  --color-brand-blue-200: #c4cbfd;
+  --color-brand-blue-300: #98a2fb;
+  --color-brand-blue-400: #5e6ef7;
+  --color-brand-blue-500: #2439f5;
+  --color-brand-blue-600: #0a1fd4;
+  --color-brand-blue-700: #0819b0;
+  --color-brand-blue-800: #0b1a89;
+  --color-brand-blue-900: #0c186a;
+  --color-brand-blue-950: #09103e;
+  --color-brand-blue: var(--color-brand-blue-600);
+  --color-brand-blue-dark: var(--color-brand-blue-700);
+
   --font-sans: "PP Neue Montreal", -apple-system, BlinkMacSystemFont,
     "Segoe UI", Helvetica, Arial, sans-serif;
   --font-mono: "PP Neue Montreal Mono", ui-monospace, "SF Mono", Menlo,
     Consolas, monospace;
 
-  --container-content: 1120px;
+  --text-nav: 14.5px;
+
+  --container-content: 1200px;
 }
 
 html {
@@ -56,7 +76,7 @@ html {
 }
 
 body {
-  background: var(--color-navy);
+  background: var(--color-black);
   color: #ffffff;
   font-family: var(--font-sans);
   line-height: 1.55;

@@ -34,7 +34,7 @@ const METRICS: { icon: string; from: string; to: string }[] = [
 
 export default function Testimonial() {
   return (
-    <section className="py-24 max-[760px]:py-16.5">
+    <section className="py-24 max-md:py-16.5">
       <Container>
         <SectionHead
           className="mx-auto text-center"
@@ -45,35 +45,35 @@ export default function Testimonial() {
           maintaining safety and consistency.
         </SectionHead>
 
-        <div className="grid grid-cols-2 max-[760px]:grid-cols-1 gap-5 mb-14">
+        <div className="grid grid-cols-2 max-md:grid-cols-1 gap-5 mb-14">
           {QUOTES.map((q) => (
             <div
               key={q.name}
               className={`rounded-3xl p-8 ${
                 q.highlighted
-                  ? "bg-black/[0.02] border border-black/15"
+                  ? "bg-black/2 border border-black/15"
                   : "border border-black/15"
               }`}
             >
               <div
                 aria-hidden="true"
-                className="font-serif text-[40px] leading-[0.6] text-[#0A1FD4] mb-4"
+                className="font-serif text-[40px] leading-[0.6] text-brand-blue mb-4"
               >
                 &ldquo;
               </div>
-              <blockquote className="text-[18px] leading-[1.5] tracking-tight mb-7 text-[#1a1a1a]">
+              <blockquote className="text-[18px] leading-normal tracking-tight mb-7 text-ink">
                 {q.quote}
               </blockquote>
               <div className="flex items-center gap-3.25">
                 <div
                   aria-hidden="true"
-                  className="w-11 h-11 rounded-full bg-[#0A1FD4] text-white flex items-center justify-center font-medium text-sm shrink-0"
+                  className="w-11 h-11 rounded-full bg-brand-blue text-white flex items-center justify-center font-medium text-sm shrink-0"
                 >
                   {q.initials}
                 </div>
                 <div className="text-left">
-                  <div className="font-medium text-[15px] text-[#1a1a1a]">{q.name}</div>
-                  <div className="font-mono text-[13px] text-[#5B6B8C]">
+                  <div className="font-medium text-[15px] text-ink">{q.name}</div>
+                  <div className="font-mono text-[13px] text-ink-faint">
                     {q.role}
                   </div>
                 </div>
@@ -82,14 +82,14 @@ export default function Testimonial() {
           ))}
         </div>
 
-        <div className="grid grid-cols-4 max-[900px]:grid-cols-2 max-[480px]:grid-cols-1 gap-x-8 gap-y-8 border-t border-black/15 pt-11">
+        <div className="grid grid-cols-4 max-lg:grid-cols-2 max-sm:grid-cols-1 gap-x-8 gap-y-8 border-t border-black/15 pt-11">
           {METRICS.map((m) => (
             <div key={m.from}>
               <div className="text-2xl mb-3" aria-hidden="true">
                 {m.icon}
               </div>
-              <p className="text-[14.5px] text-[#4a5678] leading-snug">
-                {m.from} <span className="text-[#0A1FD4]">→</span> {m.to}
+              <p className="text-[14.5px] text-ink-muted leading-snug">
+                {m.from} <span className="text-brand-blue">→</span> {m.to}
               </p>
             </div>
           ))}

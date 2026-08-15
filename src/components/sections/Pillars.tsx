@@ -18,7 +18,7 @@ const PILLARS: { title: string; body: string }[] = [
 
 export default function Pillars() {
   return (
-    <section id="why-codeplain" className="py-24 max-[760px]:py-16.5 scroll-mt-20">
+    <section id="why-codeplain" className="py-24 max-md:py-16.5 scroll-mt-20">
       <Container>
         <SectionHead
           className="mx-auto text-center"
@@ -29,11 +29,11 @@ export default function Pillars() {
           across developers and we attempt to fix it with more code reviews. You
           never see the 10x productivity that AI claims.
         </SectionHead>
-        <div className="grid grid-cols-3 max-[760px]:grid-cols-1 gap-x-8 gap-y-10 border-t border-black/15 pt-11">
+        <div className="grid grid-cols-3 max-md:grid-cols-1 gap-x-8 gap-y-10 border-t border-black/15 pt-11">
           {PILLARS.map((p) => (
             <div key={p.title}>
-              <h3 className="text-lg mb-2.5 text-[#1a1a1a]">{p.title}</h3>
-              <p className="text-[#4a5678] text-[14.5px]">{p.body}</p>
+              <h3 className="text-lg mb-2.5 text-ink">{p.title}</h3>
+              <p className="text-ink-muted text-[14.5px]">{p.body}</p>
             </div>
           ))}
         </div>
