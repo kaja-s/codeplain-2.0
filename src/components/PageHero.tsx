@@ -1,5 +1,7 @@
 import { ReactNode } from "react";
 import Container from "./Container";
+import Heading from "./Heading";
+import Paragraph from "./Paragraph";
 
 export default function PageHero({
   eyebrow,
@@ -13,12 +15,16 @@ export default function PageHero({
   return (
     <section className="pt-20 pb-14">
       <Container>
-        <p className="font-mono text-sm text-accent mb-5">{eyebrow}</p>
-        <h1 className="text-[clamp(30px,4.6vw,46px)] leading-[1.08] max-w-[18ch] mb-5.5">
+        <Paragraph size="custom" className="font-mono text-sm text-brand-blue mb-5">
+          {eyebrow}
+        </Paragraph>
+        <Heading as="h1" size="h1" className="max-w-[18ch] mb-5.5">
           {title}
-        </h1>
+        </Heading>
         {children && (
-          <p className="text-[17px] text-text-body max-w-[56ch]">{children}</p>
+          <Paragraph size="custom" className="text-[17px] text-ink-muted max-w-[56ch]">
+            {children}
+          </Paragraph>
         )}
       </Container>
     </section>

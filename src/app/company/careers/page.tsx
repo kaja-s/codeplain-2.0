@@ -13,7 +13,7 @@ export default function Careers() {
   return (
     <>
       <Header />
-      <main>
+      <main className="bg-white text-ink">
         <PageHero eyebrow="Company · Careers" title="This page is coming together.">
           We&apos;re rebuilding this page. Head back to the homepage in the meantime.
         </PageHero>

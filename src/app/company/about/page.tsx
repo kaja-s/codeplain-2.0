@@ -13,7 +13,7 @@ export default function About() {
   return (
     <>
       <Header />
-      <main>
+      <main className="bg-white text-ink">
         <PageHero eyebrow="Company · About" title="This page is coming together.">
           We&apos;re rebuilding this page. Head back to the homepage in the meantime.
         </PageHero>

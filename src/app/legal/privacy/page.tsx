@@ -12,10 +12,10 @@ export default function Privacy() {
   return (
     <>
       <Header />
-      <main>
+      <main className="bg-white text-ink">
         <PageHero eyebrow="Legal" title="Privacy Policy">
           Our Privacy Policy is being finalized with legal counsel. Questions in the meantime? Contact{" "}
-          <a href="mailto:info@codeplain.ai" className="text-accent border-b border-accent pb-px">info@codeplain.ai</a>.
+          <a href="mailto:info@codeplain.ai" className="text-brand-blue border-b border-brand-blue pb-px">info@codeplain.ai</a>.
         </PageHero>
       </main>
       <Footer />
