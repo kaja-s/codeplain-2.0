@@ -1,4 +1,6 @@
 import { ReactNode } from "react";
+import Heading from "./Heading";
+import Paragraph from "./Paragraph";
 
 export default function SectionHead({
   kicker,
@@ -14,15 +16,17 @@ export default function SectionHead({
   return (
     <div className={`max-w-[52ch] mb-13 ${className}`}>
       {kicker && (
-        <p className="font-mono text-xs tracking-wide text-brand-blue uppercase mb-4">
+        <Paragraph size="eyebrow" className="text-brand-blue mb-4">
           {kicker}
-        </p>
+        </Paragraph>
       )}
-      <h2 className="text-[clamp(27px,3.6vw,38px)] leading-[1.1] font-medium tracking-tight mb-4 text-ink">
+      <Heading as="h2" className="mb-4 text-ink">
         {title}
-      </h2>
+      </Heading>
       {children && (
-        <p className="text-ink-muted text-lg">{children}</p>
+        <Paragraph size="lead" className="text-ink-muted">
+          {children}
+        </Paragraph>
       )}
     </div>
   );

@@ -1,5 +1,6 @@
 import Container from "@/components/Container";
 import SectionHead from "@/components/SectionHead";
+import Paragraph from "@/components/Paragraph";
 
 const QUOTES: {
   quote: string;
@@ -61,9 +62,13 @@ export default function Testimonial() {
               >
                 &ldquo;
               </div>
-              <blockquote className="text-[18px] leading-normal tracking-tight mb-7 text-ink">
+              <Paragraph
+                as="blockquote"
+                size="custom"
+                className="text-[18px] leading-normal tracking-tight mb-7 text-ink"
+              >
                 {q.quote}
-              </blockquote>
+              </Paragraph>
               <div className="flex items-center gap-3.25">
                 <div
                   aria-hidden="true"
@@ -72,10 +77,12 @@ export default function Testimonial() {
                   {q.initials}
                 </div>
                 <div className="text-left">
-                  <div className="font-medium text-[15px] text-ink">{q.name}</div>
-                  <div className="font-mono text-[13px] text-ink-faint">
+                  <Paragraph as="div" size="custom" className="font-medium text-[15px] text-ink">
+                    {q.name}
+                  </Paragraph>
+                  <Paragraph as="div" size="custom" className="font-mono text-[13px] text-ink-faint">
                     {q.role}
-                  </div>
+                  </Paragraph>
                 </div>
               </div>
             </div>
@@ -88,9 +95,9 @@ export default function Testimonial() {
               <div className="text-2xl mb-3" aria-hidden="true">
                 {m.icon}
               </div>
-              <p className="text-[14.5px] text-ink-muted leading-snug">
+              <Paragraph className="text-ink-muted">
                 {m.from} <span className="text-brand-blue">→</span> {m.to}
-              </p>
+              </Paragraph>
             </div>
           ))}
         </div>

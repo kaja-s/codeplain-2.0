@@ -21,11 +21,10 @@ function IconGitPullRequest({ className = "" }: { className?: string }) {
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
       aria-hidden="true"
-      className={className}
+      className={`stroke-2 ${className}`}
     >
       <path d="M4 18a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
       <path d="M4 6a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
@@ -66,14 +65,9 @@ type PR = {
   agent: "Claude Code" | "Codex";
 };
 
-const ROW_HEIGHT = 78;
-
 function PRListItem({ pr }: { pr: PR }) {
   return (
-    <div
-      className="flex flex-col justify-center gap-2 border-b border-black/10 px-6"
-      style={{ height: ROW_HEIGHT }}
-    >
+    <div className="flex h-[78px] flex-col justify-center gap-2 border-b border-black/10 px-6">
       <div className="flex items-center gap-2.5">
         <IconGitPullRequest className="shrink-0 text-black/30" />
         <span className="font-mono text-[14px] text-black/80">{pr.title}</span>
@@ -175,13 +169,12 @@ function getPR(index: number): PR {
   };
 }
 
-const VISIBLE_ROWS = 3;
-const VIEWPORT_HEIGHT = ROW_HEIGHT * VISIBLE_ROWS;
 const ROTATE_MS = 3200;
+// Row is 78px tall, 3 rows visible (234px), sliding/transition distance is
+// one row — kept in sync by hand with the h-[78px]/h-[234px]/-translate-y-[78px]
+// Tailwind classes below since arbitrary values must be static literals.
 const TRANSITION_MS = 600;
 const COUNT_TICK_MS = 2600;
-const FADE_MASK =
-  "linear-gradient(to bottom, black 0%, black 55%, transparent 96%)";
 
 function usePRAccumulation() {
   const [offset, setOffset] = useState(0);
@@ -305,21 +298,13 @@ export default function HeroVisual() {
             </span>
           </div>
           <div className="relative flex-1">
-            <div
-              className="overflow-hidden"
-              style={{
-                height: VIEWPORT_HEIGHT,
-                maskImage: FADE_MASK,
-                WebkitMaskImage: FADE_MASK,
-              }}
-            >
+            <div className="h-[234px] overflow-hidden mask-b-from-55% mask-b-to-96%">
               <div
-                style={{
-                  transform: `translateY(${animating ? -ROW_HEIGHT : 0}px)`,
-                  transition: animating
-                    ? `transform ${TRANSITION_MS}ms ease-in-out`
-                    : "none",
-                }}
+                className={
+                  animating
+                    ? "-translate-y-[78px] transition-transform duration-[600ms] ease-in-out"
+                    : "translate-y-0 transition-none"
+                }
               >
                 {items.map((pr, i) => (
                   <PRListItem key={`slot-${i}`} pr={pr} />
@@ -425,10 +410,10 @@ export default function HeroVisual() {
                     height="9"
                     fill="none"
                     stroke="white"
-                    strokeWidth="3"
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     aria-hidden="true"
+                    className="stroke-3"
                   >
                     <path d="M5 13l4 4L19 7" />
                   </svg>

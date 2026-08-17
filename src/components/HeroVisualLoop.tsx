@@ -99,11 +99,10 @@ function IconSpec({ className = "" }: { className?: string }) {
       height="18"
       fill="none"
       stroke="currentColor"
-      strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
       aria-hidden="true"
-      className={className}
+      className={`stroke-2 ${className}`}
     >
       <path d="M6 3h8l4 4v14H6z" />
       <path d="M9 10h6M9 14h6M9 18h3" />
@@ -119,10 +118,9 @@ function IconCodeplain({ className = "" }: { className?: string }) {
       height="18"
       fill="none"
       stroke="currentColor"
-      strokeWidth="2"
       strokeLinecap="round"
       aria-hidden="true"
-      className={className}
+      className={`stroke-2 ${className}`}
     >
       <path d="M12 3v18M4.5 7.5l15 9M19.5 7.5l-15 9" />
     </svg>
@@ -137,11 +135,10 @@ function IconCheck({ className = "" }: { className?: string }) {
       height="10"
       fill="none"
       stroke="currentColor"
-      strokeWidth="3"
       strokeLinecap="round"
       strokeLinejoin="round"
       aria-hidden="true"
-      className={className}
+      className={`stroke-3 ${className}`}
     >
       <path d="M5 13l4 4L19 7" />
     </svg>
@@ -156,10 +153,9 @@ function IconX({ className = "" }: { className?: string }) {
       height="9"
       fill="none"
       stroke="currentColor"
-      strokeWidth="3"
       strokeLinecap="round"
       aria-hidden="true"
-      className={className}
+      className={`stroke-3 ${className}`}
     >
       <path d="M6 6l12 12M18 6L6 18" />
     </svg>

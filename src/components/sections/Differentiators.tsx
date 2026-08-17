@@ -1,5 +1,7 @@
 import Container from "@/components/Container";
 import SectionHead from "@/components/SectionHead";
+import Heading from "@/components/Heading";
+import Paragraph from "@/components/Paragraph";
 
 const DIFFERENTIATORS: { title: string; body: string }[] = [
   {
@@ -31,8 +33,10 @@ export default function Differentiators() {
         <div className="grid grid-cols-3 max-md:grid-cols-1 gap-5">
           {DIFFERENTIATORS.map((d) => (
             <div key={d.title} className="border-l-2 border-brand-blue pl-5 py-1">
-              <h3 className="text-lg mb-2.5 text-ink">{d.title}</h3>
-              <p className="text-ink-muted text-[14.5px]">{d.body}</p>
+              <Heading as="h3" size="h4" className="mb-2.5 text-ink">
+                {d.title}
+              </Heading>
+              <Paragraph className="text-ink-muted">{d.body}</Paragraph>
             </div>
           ))}
         </div>

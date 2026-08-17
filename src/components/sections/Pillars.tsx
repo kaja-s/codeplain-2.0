@@ -1,5 +1,7 @@
 import Container from "@/components/Container";
 import SectionHead from "@/components/SectionHead";
+import Heading from "@/components/Heading";
+import Paragraph from "@/components/Paragraph";
 
 const PILLARS: { title: string; body: string }[] = [
   {
@@ -32,8 +34,10 @@ export default function Pillars() {
         <div className="grid grid-cols-3 max-md:grid-cols-1 gap-x-8 gap-y-10 border-t border-black/15 pt-11">
           {PILLARS.map((p) => (
             <div key={p.title}>
-              <h3 className="text-lg mb-2.5 text-ink">{p.title}</h3>
-              <p className="text-ink-muted text-[14.5px]">{p.body}</p>
+              <Heading as="h3" size="h4" className="mb-2.5 text-ink">
+                {p.title}
+              </Heading>
+              <Paragraph className="text-ink-muted">{p.body}</Paragraph>
             </div>
           ))}
         </div>

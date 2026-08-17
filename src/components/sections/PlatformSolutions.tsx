@@ -1,6 +1,8 @@
 import { ReactNode } from "react";
 import Container from "@/components/Container";
 import { PrimaryButton, SecondaryButton } from "@/components/Buttons";
+import Heading from "@/components/Heading";
+import Paragraph from "@/components/Paragraph";
 
 type Solution = {
   name: string;
@@ -13,14 +15,14 @@ type Solution = {
 function ConnectionIcon() {
   return (
     <svg width="26" height="26" viewBox="0 0 28 28" fill="none" aria-hidden="true">
-      <circle cx="6" cy="7" r="3" stroke="currentColor" strokeWidth="1.6" />
-      <circle cx="22" cy="7" r="3" stroke="currentColor" strokeWidth="1.6" />
-      <circle cx="14" cy="21" r="3" stroke="currentColor" strokeWidth="1.6" />
+      <circle cx="6" cy="7" r="3" stroke="currentColor" className="stroke-[1.6]" />
+      <circle cx="22" cy="7" r="3" stroke="currentColor" className="stroke-[1.6]" />
+      <circle cx="14" cy="21" r="3" stroke="currentColor" className="stroke-[1.6]" />
       <path
         d="M9 8.5 12 18.5M19 8.5 16 18.5M9 7H19"
         stroke="currentColor"
-        strokeWidth="1.6"
         strokeLinecap="round"
+        className="stroke-[1.6]"
       />
     </svg>
   );
@@ -29,14 +31,26 @@ function ConnectionIcon() {
 function CrawlIcon() {
   return (
     <svg width="26" height="26" viewBox="0 0 28 28" fill="none" aria-hidden="true">
-      <rect x="4" y="4" width="20" height="14" rx="1.5" stroke="currentColor" strokeWidth="1.6" />
-      <path d="M4 9h20M10.5 4v14M17.5 4v14" stroke="currentColor" strokeWidth="1.3" />
+      <rect
+        x="4"
+        y="4"
+        width="20"
+        height="14"
+        rx="1.5"
+        stroke="currentColor"
+        className="stroke-[1.6]"
+      />
+      <path
+        d="M4 9h20M10.5 4v14M17.5 4v14"
+        stroke="currentColor"
+        className="stroke-[1.3]"
+      />
       <path
         d="M14 18v6m0 0-3-3m3 3 3-3"
         stroke="currentColor"
-        strokeWidth="1.6"
         strokeLinecap="round"
         strokeLinejoin="round"
+        className="stroke-[1.6]"
       />
     </svg>
   );
@@ -72,16 +86,16 @@ export default function PlatformSolutions() {
     <section id="solutions" className="py-24 max-md:py-16.5 bg-black/2 scroll-mt-20">
       <Container>
         <div className="max-w-[52ch] mx-auto text-center mb-13">
-          <p className="font-mono text-xs tracking-wide text-brand-blue uppercase mb-4">
+          <Paragraph size="eyebrow" className="text-brand-blue mb-4">
             Solutions
-          </p>
-          <h2 className="text-[clamp(27px,3.6vw,38px)] leading-[1.1] font-medium tracking-tight mb-4 text-ink">
+          </Paragraph>
+          <Heading as="h2" className="mb-4 text-ink">
             Built for Scaling AI Coding
-          </h2>
-          <p className="text-lg text-ink-muted">
+          </Heading>
+          <Paragraph size="lead" className="text-ink-muted">
             Whether you&apos;re building integrations or automating data work,
             Codeplain gives you the tools to do it reliably.
-          </p>
+          </Paragraph>
         </div>
 
         <div className="grid grid-cols-2 max-md:grid-cols-1 gap-5">
@@ -94,13 +108,16 @@ export default function PlatformSolutions() {
                 {s.icon}
               </div>
 
-              <h3 className="mt-6 text-[clamp(24px,3vw,32px)] leading-[1.08] font-medium text-ink">
+              <Heading as="h3" className="mt-6 text-ink">
                 {s.name}
-              </h3>
+              </Heading>
 
-              <p className="mt-4 text-[16.5px] leading-snug text-ink-muted max-w-[42ch]">
+              <Paragraph
+                size="custom"
+                className="mt-4 text-[16.5px] leading-snug text-ink-muted max-w-[42ch]"
+              >
                 {s.copy}
-              </p>
+              </Paragraph>
 
               <div className="mt-auto pt-9">
                 {s.cta.variant === "primary" ? (

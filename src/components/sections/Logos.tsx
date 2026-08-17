@@ -28,9 +28,9 @@ function ExternalLinkIcon({ className = "" }: { className?: string }) {
       <path
         d="M4 2H10M10 2V8M10 2L2 10"
         stroke="currentColor"
-        strokeWidth="1.3"
         strokeLinecap="round"
         strokeLinejoin="round"
+        className="stroke-[1.3]"
       />
     </svg>
   );

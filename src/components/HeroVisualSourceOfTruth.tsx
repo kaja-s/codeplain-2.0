@@ -102,11 +102,10 @@ function IconCheck({ className = "" }: { className?: string }) {
       height="15"
       fill="none"
       stroke="currentColor"
-      strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
       aria-hidden="true"
-      className={className}
+      className={`stroke-2 ${className}`}
     >
       <circle cx="12" cy="12" r="9" />
       <path d="M8.5 12.3l2.4 2.4L15.8 9" />
@@ -122,10 +121,9 @@ function IconDashedX({ className = "" }: { className?: string }) {
       height="15"
       fill="none"
       stroke="currentColor"
-      strokeWidth="2"
       strokeLinecap="round"
       aria-hidden="true"
-      className={className}
+      className={`stroke-2 ${className}`}
     >
       <circle cx="12" cy="12" r="9" strokeDasharray="2.6 3.2" />
       <path d="M9.5 9.5l5 5M14.5 9.5l-5 5" />
@@ -177,11 +175,10 @@ function IconUser({ className = "" }: { className?: string }) {
       height="26"
       fill="none"
       stroke="currentColor"
-      strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
       aria-hidden="true"
-      className={className}
+      className={`stroke-2 ${className}`}
     >
       <circle cx="12" cy="8" r="3.5" />
       <path d="M5 20c0-3.9 3.1-7 7-7s7 3.1 7 7" />
@@ -216,8 +213,7 @@ function IconNode({
           {icon}
           <svg
             viewBox="0 0 72 72"
-            className={`absolute inset-0 h-full w-full ${active ? "animate-spin" : ""}`}
-            style={{ animationDuration: "2.4s" }}
+            className={`absolute inset-0 h-full w-full ${active ? "animate-[spin_2.4s_linear_infinite]" : ""}`}
           >
             <circle
               cx="36"
@@ -225,10 +221,10 @@ function IconNode({
               r="34"
               fill="none"
               stroke="var(--color-brand-blue)"
-              strokeWidth="2"
               strokeLinecap="round"
               strokeDasharray="38 176"
               opacity={active ? 1 : 0.2}
+              className="stroke-2"
             />
           </svg>
         </div>

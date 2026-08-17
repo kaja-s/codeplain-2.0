@@ -1,13 +1,18 @@
 import Container from "@/components/Container";
 import { PrimaryButton, SecondaryButton } from "@/components/Buttons";
+import Heading from "@/components/Heading";
 
 export default function FinalCta() {
   return (
     <section className="py-24 max-md:py-16.5 bg-black/2 border-t border-black/10 text-ink text-center">
       <Container>
-        <h2 className="text-[clamp(28px,4vw,42px)] leading-[1.08] max-w-[20ch] mx-auto mb-7.5">
+        <Heading
+          as="h2"
+          size="custom"
+          className="text-[clamp(28px,4vw,42px)] leading-[1.08] max-w-[20ch] mx-auto mb-7.5"
+        >
           Put your team back in control.
-        </h2>
+        </Heading>
         <div className="flex gap-3 justify-center flex-wrap mb-5.5">
           <PrimaryButton href="/solutions/integrations-forge">
             Get Started with Integrations Forge
