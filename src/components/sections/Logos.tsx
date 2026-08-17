@@ -1,4 +1,5 @@
 import Container from "@/components/Container";
+import Paragraph from "@/components/Paragraph";
 import DevRevLogo from "@/components/logos/DevRevLogo";
 import IncodeLogo from "@/components/logos/IncodeLogo";
 import ShovelsLogo from "@/components/logos/ShovelsLogo";
@@ -39,6 +40,11 @@ function ExternalLinkIcon({ className = "" }: { className?: string }) {
 export default function Logos() {
   return (
     <div>
+      <Container>
+        <Paragraph size="eyebrow" className="text-center text-ink-muted mb-6">
+          Trusted by world-class developers &amp; industry leading teams
+        </Paragraph>
+      </Container>
       <Container className="px-0">
         <div className="grid grid-cols-4 gap-1 max-md:grid-cols-2 ">
           {LOGOS.map(({ name, Logo, href }) => {

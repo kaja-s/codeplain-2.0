@@ -83,7 +83,7 @@ const SOLUTIONS: Solution[] = [
 
 export default function PlatformSolutions() {
   return (
-    <section id="solutions" className="py-24 max-md:py-16.5 bg-black/2 scroll-mt-20">
+    <section id="solutions" className="py-24 max-md:py-16.5 scroll-mt-20">
       <Container>
         <div className="max-w-[52ch] mx-auto text-center mb-13">
           <Paragraph size="eyebrow" className="text-brand-blue mb-4">

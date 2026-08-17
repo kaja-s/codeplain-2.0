@@ -24,8 +24,9 @@ export default function Pillars() {
       <Container>
         <SectionHead
           className="mx-auto text-center"
-          kicker="The promise"
+          kicker="[The promise]"
           title="Control at Speed"
+          bodyClassName="text-ink"
         >
           Without Integrations Forge, agentic coding is prone to uneven results
           across developers and we attempt to fix it with more code reviews. You

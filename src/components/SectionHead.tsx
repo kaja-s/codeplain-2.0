@@ -7,11 +7,13 @@ export default function SectionHead({
   title,
   children,
   className = "",
+  bodyClassName = "text-ink-muted",
 }: {
   kicker?: string;
   title: ReactNode;
   children?: ReactNode;
   className?: string;
+  bodyClassName?: string;
 }) {
   return (
     <div className={`max-w-[52ch] mb-13 ${className}`}>
@@ -24,7 +26,7 @@ export default function SectionHead({
         {title}
       </Heading>
       {children && (
-        <Paragraph size="lead" className="text-ink-muted">
+        <Paragraph size="lead" className={bodyClassName}>
           {children}
         </Paragraph>
       )}

@@ -8,7 +8,7 @@ export type ParagraphSize = "eyebrow" | "lead" | "body" | "small" | "custom";
 // anything else — pass the full size treatment via className instead.
 const SIZE_STYLES: Record<ParagraphSize, string> = {
   eyebrow: "font-mono text-xs tracking-wide uppercase",
-  lead: "text-lg leading-snug",
+  lead: "text-base leading-snug",
   body: "text-[14.5px] leading-snug",
   small: "text-sm leading-snug",
   custom: "",
